@@ -46,6 +46,7 @@
 body {
     background-color: rgb(250, 249, 237);
     background-image: url(images/white-paper-texture-background.jpg);
+    background-size: contain;
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -79,9 +80,13 @@ body {
     width: 100%;
     justify-content: center;
     position: absolute;
-    top: 200px;
+    top: 180px;
     flex-wrap: wrap;
     align-items: center;
+
+    @media screen and (max-width: 390px) {
+        flex-direction: column;
+    }
 }
 
 .label:first-child {
@@ -153,9 +158,11 @@ box-shadow: -1px 3px 5px 0px rgba(0,0,0,0.75);
 .linkedin-selected {
     display: none;
     animation: slidein 2900ms;
+    text-align: end;
 }
 
 .github-selected {
     display: none;
     animation: slidein 2900ms;
+    text-align: end;
 }
