@@ -1,10 +1,14 @@
 @keyframes slidein {
-    from {
+    0% {
       transform: translateX(280px);
+      opacity: 0;
     }
-  
-    to {
+    30% {
+        opacity: 0%;
+      }
+    100% {
       transform: translateX(0);
+      opacity: 100%;
     }
   }
 
@@ -125,12 +129,12 @@ box-shadow: -1px 3px 5px 0px rgba(0,0,0,0.75);
     background-position: center;
     margin-left: 15px;
 
-    &:hover {
+    /* &:hover {
         cursor: pointer;
-        animation: tilt 1500ms;
+        animation: tilt 2500ms;
         animation-fill-mode: forwards;
         animation-timing-function: ease-in-out;
-    }
+    } */
 }
 
 .linkedin {
@@ -148,10 +152,10 @@ box-shadow: -1px 3px 5px 0px rgba(0,0,0,0.75);
 
 .linkedin-selected {
     display: none;
-    animation: slidein 2s;
+    animation: slidein 2900ms;
 }
 
 .github-selected {
     display: none;
-    animation: slidein 2s;
+    animation: slidein 2900ms;
 }
