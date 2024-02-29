@@ -46,7 +46,7 @@
 body {
     background-color: rgb(250, 249, 237);
     background-image: url(images/white-paper-texture-background.jpg);
-    background-size: contain;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     height: 100vh;
