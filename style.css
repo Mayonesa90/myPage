@@ -1,0 +1,157 @@
+@keyframes slidein {
+    from {
+      transform: translateX(280px);
+    }
+  
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes tilt {
+    0% {transform: rotate(0deg);}
+    50% {
+        transform: rotate(90deg) translateY(-33px);
+    }
+    70% {
+        transform: rotate(90deg) translateY(-33px);
+    }
+    100% {transform: rotate(0deg);}
+}
+
+
+.--body_text {
+    font-family: "Noto Sans Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-variation-settings:
+      "wdth" 100;
+  }
+
+
+.--handwritten {
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+    background-color: rgb(250, 249, 237);
+    background-image: url(images/white-paper-texture-background.jpg);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.--title {
+    font-family: "Special Elite", system-ui;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.label {
+    background-color: rgb(26, 26, 26);
+    color: white;
+    width: max-content;
+    -webkit-box-shadow: -1px 3px 5px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 3px 5px -2px rgba(0,0,0,0.75);
+    box-shadow: -1px 3px 5px -2px rgba(0,0,0,0.75);
+}
+
+.label_text {
+    margin: 10px 15px 5px 15px;
+    letter-spacing: 5px;
+}
+
+.header {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+    position: absolute;
+    top: 200px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.label:first-child {
+    transform: rotate(3deg);
+}
+
+.label:nth-child(2) {
+    transform: rotate(-3deg);
+}
+
+.label:nth-child(3) {
+    transform: rotate(4deg);
+}
+
+.card {
+    /* -webkit-box-shadow: 1px 6px 17px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 6px 17px 0px rgba(0,0,0,0.75);
+    box-shadow: 1px 6px 17px 0px rgba(0,0,0,0.75); */
+    -webkit-box-shadow: -1px 3px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 3px 5px 0px rgba(0,0,0,0.75);
+box-shadow: -1px 3px 5px 0px rgba(0,0,0,0.75);
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    height: 150px;
+    padding: 20px;
+    border-radius: 3px;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin: 0 auto;
+    background-image: url(images/white-paper-texture.jpg);
+    background-size: cover;
+}
+
+.card_section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn {
+    width: 26px;
+    height: 26px;
+    padding: 5px;
+    background-position: center;
+    margin-left: 15px;
+
+    &:hover {
+        cursor: pointer;
+        animation: tilt 1500ms;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+    }
+}
+
+.linkedin {
+    background-image: url(images/linkedin-logo.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    flex-shrink: 0;
+}
+
+.github {
+    background-image: url(images/github-logo.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.linkedin-selected {
+    display: none;
+    animation: slidein 2s;
+}
+
+.github-selected {
+    display: none;
+    animation: slidein 2s;
+}
