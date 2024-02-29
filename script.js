@@ -9,7 +9,7 @@ const linkedinBtn = document.querySelector(".linkedin"),
       githubTxt = document.querySelector(".github-selected");
 
 
-linkedinBtn.addEventListener("mouseover", () => {
+linkedinBtn.addEventListener("click", () => {
     linkedinTxt.style.display = "block";
     linkedinBtn.style.animation = "tilt 2600ms";
     linkedinBtn.style.cursor = "pointer";
@@ -21,7 +21,7 @@ linkedinBtn.addEventListener("mouseover", () => {
     
 })
 
-githubBtn.addEventListener("mouseover", () => {
+githubBtn.addEventListener("click", () => {
     githubTxt.style.display = "block";
     githubBtn.style.animation = "tilt 2600ms";
     githubBtn.style.cursor = "pointer";

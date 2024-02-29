@@ -12,6 +12,33 @@
     }
   }
 
+  @keyframes slideleft {
+    0% {
+      transform: translateX(500px) translateY(-500px);
+    }
+    100% {
+      transform: translateX(0) translateY(0) rotate(4deg);
+    }
+  }
+
+  @keyframes slidedown {
+    0% {
+      transform: translateX(0px) translateY(-500px);
+    }
+    100% {
+      transform: translateX(0) translateY(0) rotate(-3deg);
+    }
+  }
+
+  @keyframes slideright {
+    0% {
+      transform: translateX(-500px) translateY(-500px);
+    }
+    100% {
+      transform: translateX(0) translateY(0) rotate(3deg);
+    }
+  }
+
   @keyframes tilt {
     0% {transform: rotate(0deg);}
     50% {
@@ -19,6 +46,17 @@
     }
     70% {
         transform: rotate(90deg) translateY(-33px);
+    }
+    100% {transform: rotate(0deg);}
+}
+
+@keyframes small-tilt {
+    0% {transform: rotate(0deg);}
+    50% {
+        transform: rotate(20deg) translateY(-8px);
+    }
+    80% {
+        transform: rotate(20deg) translateY(-8px);
     }
     100% {transform: rotate(0deg);}
 }
@@ -62,7 +100,7 @@ body {
 
 .label {
     background-color: rgb(26, 26, 26);
-    color: white;
+    color: rgba(255, 255, 255, 0.75);    
     width: max-content;
     -webkit-box-shadow: -1px 3px 5px -2px rgba(0,0,0,0.75);
     -moz-box-shadow: -1px 3px 5px -2px rgba(0,0,0,0.75);
@@ -93,23 +131,28 @@ body {
 
 .label:first-child {
     transform: rotate(3deg);
+    animation: slideright 3s;
+    animation-fill-mode: backwards;
 }
 
 .label:nth-child(2) {
     transform: rotate(-3deg);
+    animation: slidedown 3s;
+    animation-delay: 500ms;
+    animation-fill-mode: backwards;
 }
 
 .label:nth-child(3) {
     transform: rotate(4deg);
+    animation: slideleft 3s;
+    animation-delay: 800ms;
+    animation-fill-mode: backwards;
 }
 
 .card {
-    /* -webkit-box-shadow: 1px 6px 17px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 1px 6px 17px 0px rgba(0,0,0,0.75);
-    box-shadow: 1px 6px 17px 0px rgba(0,0,0,0.75); */
     -webkit-box-shadow: -1px 3px 5px 0px rgba(0,0,0,0.75);
--moz-box-shadow: -1px 3px 5px 0px rgba(0,0,0,0.75);
-box-shadow: -1px 3px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 3px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: -1px 3px 5px 0px rgba(0,0,0,0.75);
     display: flex;
     flex-direction: column;
     width: 320px;
@@ -136,12 +179,9 @@ box-shadow: -1px 3px 5px 0px rgba(0,0,0,0.75);
     background-position: center;
     margin-left: 15px;
 
-    /* &:hover {
+    &:hover {
         cursor: pointer;
-        animation: tilt 2500ms;
-        animation-fill-mode: forwards;
-        animation-timing-function: ease-in-out;
-    } */
+    }
 }
 
 .linkedin {
@@ -149,12 +189,16 @@ box-shadow: -1px 3px 5px 0px rgba(0,0,0,0.75);
     background-repeat: no-repeat;
     background-size: contain;
     flex-shrink: 0;
+    animation: small-tilt 1s;
+    animation-delay: 4500ms;
 }
 
 .github {
     background-image: url(images/github-logo.svg);
     background-repeat: no-repeat;
     background-size: contain;
+    animation: small-tilt 1s;
+    animation-delay: 5500ms;
 }
 
 .linkedin-selected {
