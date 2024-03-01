@@ -333,7 +333,7 @@ body {
 
 .skills-container {
     position: absolute;
-    bottom: 50px;
+    top: 600px;
     right: 50px;
     display: flex;
     flex-direction: column;
