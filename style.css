@@ -326,7 +326,7 @@ body {
 .skills-container {
     position: absolute;
     top: 60%;
-    left: -50px;
+    left: -80px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
