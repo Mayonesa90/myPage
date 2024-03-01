@@ -1,3 +1,9 @@
+@keyframes expand {
+    0% {width: 0px}
+    /* 50% {width: 100px} */
+    100% {width: min-content}
+}
+
 @keyframes slidein {
     0% {
       transform: translateX(280px);
@@ -10,7 +16,7 @@
       }
     100% {
       transform: translateX(0);
-      opacity: 100%; 
+      opacity: 100%;
       color: black;
     }
   }
@@ -81,6 +87,10 @@
     100% {transform: rotate(0deg);}
 }
 
+@keyframes appear {
+    0% {opacity: 0%}
+    100% {opacity: 100%}
+}
 
 .--body_text {
     font-family: "Noto Sans Mono", monospace;
@@ -97,8 +107,11 @@
 .--handwritten {
   font-family: "Caveat", cursive;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0, 0.65);
+  letter-spacing: 5px;
 }
 
 body {
@@ -141,7 +154,7 @@ body {
     width: 100%;
     justify-content: center;
     position: absolute;
-    top: 200px;
+    top: 150px;
     flex-wrap: wrap;
     align-items: center;
     margin-bottom: 50px;
@@ -240,7 +253,7 @@ body {
     animation-delay: 2000ms; */
 }
 
-.--deselected {
+.--slideout {
     animation: slideout 2000ms;
     animation-fill-mode: forwards;
     animation-delay: 500ms;
@@ -258,6 +271,62 @@ body {
     animation: slidein 2000ms;
     text-decoration: none;
     color: black;
+    text-align: end;
 }
 
+.skill-html {
+    position: absolute;
+    bottom: 250px;
+    right: 65px;
+    transform: rotate(-3deg);
+    animation: appear 2s;
+    animation-fill-mode: backwards;
+    animation-delay: 500ms;
+}
 
+.skill-css {
+    position: absolute;
+    bottom: 200px;
+    right: 65px;
+    transform: rotate(-3deg);
+    animation: appear 2s;
+    animation-delay: 1000ms;
+    animation-fill-mode: backwards;
+}
+
+.skill-figma {
+    position: absolute;
+    bottom: 150px;
+    right: 65px;
+    transform: rotate(-4deg);
+    animation: appear 2s;
+    animation-delay: 1500ms;
+    animation-fill-mode: backwards;
+}
+
+.skill-javascript {
+    position: absolute;
+    bottom: 100px;
+    right: 65px;
+    transform: rotate(-4deg);
+    animation: appear 2s;
+    animation-delay: 2000ms;
+    animation-fill-mode: backwards;
+}
+
+.skills {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.check {
+    width: 15px;
+    height: 20px;
+    transform: rotate(-7deg);
+}
+
+.--expand {
+    animation: expand 2s;
+    animation-delay: 2s;
+}

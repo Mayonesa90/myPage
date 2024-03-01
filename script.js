@@ -35,6 +35,7 @@ linkedinBtn.addEventListener("click", () => {
         linkedinTxt.setAttribute("href", "https://linkedin.com/in/maya-arzapalo-björklund");
         linkedinTxt.setAttribute("target", "_blank");
         linkedinTxt.classList.add("card_text");
+        // linkedInParent.classList.add("--expand");
         linkedinTxt.textContent = "https://linkedin.com/in/maya-arzapalo-björklund/";
         linkedInParent.appendChild(linkedinTxt);
         linkedinBtn.classList.add("--animation");
@@ -42,7 +43,8 @@ linkedinBtn.addEventListener("click", () => {
             linkedinBtn.classList.remove("--animation")
         }, 2500)
     } else {
-        linkedinTxt.classList.replace("card_text", "--deselected");
+        // linkedInParent.classList.remove("--expand");
+        // linkedinTxt.classList.replace("card_text", "--deselected");
         setTimeout(() => {
             linkedInParent.removeChild(linkedinTxt);
         }, 1200);
@@ -66,6 +68,7 @@ githubBtn.addEventListener("click", () => {
                 githubBtn.classList.remove("--animation")
             }, 2500)
     } else {
+        githubTxt.classList.add("--slideout");
         setTimeout(() => {
             gitHubParent.removeChild(githubTxt)
         }, 1200);
