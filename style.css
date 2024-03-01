@@ -2,13 +2,16 @@
     0% {
       transform: translateX(280px);
       opacity: 0;
+      color: transparent;
     }
     30% {
         opacity: 0%;
+        color: transparent;
       }
     100% {
       transform: translateX(0);
       opacity: 100%;
+      color: black;
     }
   }
 
@@ -16,13 +19,16 @@
     0% {
         transform: translateX(0);
         opacity: 100%;
+        color: black;
     }
     30% {
         opacity: 0%;
+        color: transparent;
       }
     100% {
         transform: translateX(320px);
         opacity: 0;
+        color: transparent;
     }
   }
 
