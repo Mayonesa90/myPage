@@ -275,9 +275,6 @@ body {
 }
 
 .skill-html {
-    /* position: absolute;
-    bottom: 250px;
-    right: 65px; */
     transform: rotate(-3deg);
     animation: appear 2s;
     animation-fill-mode: backwards;
@@ -285,9 +282,6 @@ body {
 }
 
 .skill-css {
-    /* position: absolute;
-    bottom: 200px;
-    right: 65px; */
     transform: rotate(-3deg);
     animation: appear 2s;
     animation-delay: 1000ms;
@@ -295,9 +289,6 @@ body {
 }
 
 .skill-figma {
-    /* position: absolute;
-    bottom: 150px;
-    right: 65px; */
     transform: rotate(-4deg);
     animation: appear 2s;
     animation-delay: 1500ms;
@@ -318,6 +309,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
+    margin-bottom: -10px;
 }
 
 .check {
@@ -333,17 +325,41 @@ body {
 
 .skills-container {
     position: absolute;
-    top: 70%;
-    left: 50px;
+    top: 60%;
+    left: -50px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     background-color: rgb(230, 230, 168);
-    padding: 10px;
+    padding: 10px 20px;
     width: 200px;
     height: 200px;
     -webkit-box-shadow: -1px 3px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: -1px 3px 5px 0px rgba(0,0,0,0.75);
     box-shadow: -1px 3px 5px 0px rgba(0,0,0,0.75);
-    transform: rotate(-2deg);
+    transform: rotate(-12deg);
+}
+
+.check-html {
+    animation: appear 1500ms;
+    animation-fill-mode: backwards;
+    animation-delay: 2500ms;
+}
+
+.check-css {
+    animation: appear 1500ms;
+    animation-fill-mode: backwards;
+    animation-delay: 3000ms;
+}
+
+.check-figma {
+    animation: appear 1500ms;
+    animation-fill-mode: backwards;
+    animation-delay: 3500ms;
+}
+
+.check-js {
+    animation: appear 1500ms;
+    animation-fill-mode: backwards;
+    animation-delay: 4000ms;
 }
