@@ -4,6 +4,11 @@
     100% {width: min-content}
 }
 
+@keyframes post-it_slide {
+    0% {transform: translateX(-300px) rotate(-12deg)}
+    100% {transform: translateX(0) rotate(-12deg);}
+}
+
 @keyframes slidein {
     0% {
       transform: translateX(280px);
@@ -273,7 +278,7 @@ body {
     color: black;
     text-align: end;
 }
-
+/* 
 .skill-html {
     transform: rotate(-3deg);
     animation: appear 2s;
@@ -296,14 +301,11 @@ body {
 }
 
 .skill-javascript {
-    /* position: absolute;
-    bottom: 100px;
-    right: 65px; */
     transform: rotate(-4deg);
     animation: appear 2s;
     animation-delay: 2000ms;
     animation-fill-mode: backwards;
-}
+} */
 
 .skills {
     display: flex;
@@ -326,7 +328,7 @@ body {
 .skills-container {
     position: absolute;
     top: 60%;
-    left: -80px;
+    left: -0px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -338,6 +340,8 @@ body {
     -moz-box-shadow: -1px 3px 5px 0px rgba(0,0,0,0.75);
     box-shadow: -1px 3px 5px 0px rgba(0,0,0,0.75);
     transform: rotate(-12deg);
+    animation: post-it_slide 2s;
+    animation-fill-mode: backwards;
 }
 
 .check-html {
