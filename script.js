@@ -43,11 +43,10 @@ linkedinBtn.addEventListener("click", () => {
             linkedinBtn.classList.remove("--animation")
         }, 2500)
     } else {
-        // linkedInParent.classList.remove("--expand");
-        // linkedinTxt.classList.replace("card_text", "--deselected");
+        linkedinTxt.classList.replace("card_text", "--slideout");
         setTimeout(() => {
             linkedInParent.removeChild(linkedinTxt);
-        }, 1200);
+        }, 2200);
         linkedinBtn.classList.add("--animation");
         setTimeout(() => {
             linkedinBtn.classList.remove("--animation")
@@ -68,10 +67,10 @@ githubBtn.addEventListener("click", () => {
                 githubBtn.classList.remove("--animation")
             }, 2500)
     } else {
-        githubTxt.classList.add("--slideout");
+        githubTxt.classList.replace("card_text", "--slideout");
         setTimeout(() => {
             gitHubParent.removeChild(githubTxt)
-        }, 1200);
+        }, 2200);
         githubBtn.classList.add("--animation");
         setTimeout(() => {
                 githubBtn.classList.remove("--animation")
