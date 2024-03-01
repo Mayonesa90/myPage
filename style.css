@@ -12,6 +12,20 @@
     }
   }
 
+  @keyframes slideout {
+    0% {
+        transform: translateX(0);
+        opacity: 100%;
+    }
+    30% {
+        opacity: 0%;
+      }
+    100% {
+        transform: translateX(320px);
+        opacity: 0;
+    }
+  }
+
   @keyframes slideleft {
     0% {
       transform: translateX(500px) translateY(-500px);
@@ -90,6 +104,9 @@ body {
     height: 100vh;
     justify-content: center;
     align-items: center;
+    font-family: "Noto Sans Mono", monospace;
+    font-size: 10px;
+    color: black;
 }
 
 .--title {
@@ -131,25 +148,25 @@ body {
 
 .label:first-child {
     transform: rotate(3deg);
-    animation: slideright 3s;
+    /* animation: slideright 1s;
     animation-fill-mode: backwards;
-    z-index: 3;
+    z-index: 3; */
 }
 
 .label:nth-child(2) {
     transform: rotate(-3deg);
-    animation: slidedown 3s;
+    /* animation: slidedown 1s;
     animation-delay: 500ms;
     animation-fill-mode: backwards;
-    z-index: 4;
+    z-index: 4; */
 }
 
 .label:nth-child(3) {
     transform: rotate(4deg);
-    animation: slideleft 3s;
+    /* animation: slideleft 1s;
     animation-delay: 800ms;
     animation-fill-mode: backwards;
-    z-index: 5;
+    z-index: 5; */
 }
 
 .card {
@@ -173,6 +190,15 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-align: end;
+}
+
+.card_text:hover {
+    cursor: pointer;
+}
+
+.--animation {
+    animation: tilt 2600ms;
 }
 
 .btn {
@@ -181,10 +207,14 @@ body {
     padding: 5px;
     background-position: center;
     margin-left: 15px;
+    border: none;
+    box-sizing: content-box;
+    background: transparent;
 
     &:hover {
         cursor: pointer;
     }
+
 }
 
 .linkedin {
@@ -192,26 +222,30 @@ body {
     background-repeat: no-repeat;
     background-size: contain;
     flex-shrink: 0;
-    animation: small-tilt 1s;
-    animation-delay: 4500ms;
+    /* animation: small-tilt 1s;
+    animation-delay: 1500ms; */
 }
 
 .github {
     background-image: url(images/github-logo.svg);
     background-repeat: no-repeat;
     background-size: contain;
-    animation: small-tilt 1s;
-    animation-delay: 5500ms;
+    /* animation: small-tilt 1s;
+    animation-delay: 2000ms; */
 }
 
-.linkedin-selected {
-    display: none;
-    animation: slidein 2900ms;
-    text-align: end;
+.--deselected {
+    animation: slideout 2900ms;
+    animation-fill-mode: both;
+    animation-delay: 1000ms;
+    color: black;
+    text-decoration: none;
 }
 
-.github-selected {
-    display: none;
+.--selected {
     animation: slidein 2900ms;
-    text-align: end;
+    text-decoration: none;
+    color: black;
 }
+
+
