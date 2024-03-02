@@ -211,6 +211,11 @@ body {
     border: none;
     box-sizing: content-box;
     background: transparent;
+    outline: revert;
+
+    &:focus {
+        outline: revert;
+    }
 
     &:hover {
         cursor: pointer;
