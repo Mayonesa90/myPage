@@ -115,6 +115,7 @@ body {
     background-color: rgb(250, 249, 237);
     background-image: url(images/white-paper-texture-background.jpg);
     background-size: cover;
+    background-position:top;
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -145,8 +146,8 @@ body {
 }
 
 .label {
-    background-color: rgb(26, 26, 26);
-    color: rgba(255, 255, 255, 0.75);
+    background-color: rgb(17, 17, 17);
+    color: rgb(229, 229, 229);
     width: max-content;
     -webkit-box-shadow: -1px 3px 5px -2px rgba(0,0,0,0.75);
     -moz-box-shadow: -1px 3px 5px -2px rgba(0,0,0,0.75);
@@ -185,7 +186,8 @@ body {
     border-radius: 3px;
     align-items: flex-end;
     justify-content: space-between;
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    margin-top: 150px;
     background-image: url(images/white-paper-texture.jpg);
     background-size: cover;
     color: rgba(0, 0, 0, 0.8);
@@ -249,7 +251,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    background-color: rgb(230, 230, 168);
+    background-color: rgb(240, 240, 122);
     padding: 10px 20px;
     width: 200px;
     height: 200px;
@@ -257,7 +259,7 @@ body {
     -moz-box-shadow: -1px 3px 5px 0px rgba(0,0,0,0.75);
     box-shadow: -1px 3px 5px 0px rgba(0,0,0,0.75);
     transform: rotate(-12deg);
-    animation: post-it_slide 2s;
+    animation: post-it_slide ease-in-out 2s;
     animation-fill-mode: backwards;
     z-index: 100;
 
@@ -266,9 +268,11 @@ body {
 
 .post-it-2 {
     top: 70%;
-    left: 165px;
+    left: 90px;
     animation-fill-mode: backwards;
-    animation: post-it_slide 4s;
+    animation: post-it_slide ease-in-out 1500ms;
+    background-color: rgb(150, 234, 146);
+    z-index: 99;
 }
 
 .skills {
@@ -347,4 +351,14 @@ body {
     right: 15px;
     margin: 15px;
     opacity: 90%;
+    display: none;
+}
+
+.logo-card{
+    width: 30px;
+    align-self: flex-start;
+    justify-self: start;
+    position: absolute;
+    opacity: 90%;
+
 }
