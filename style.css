@@ -179,7 +179,7 @@ body {
     box-shadow: -1px 3px 5px 0px rgba(0,0,0,0.75);
     display: flex;
     flex-direction: column;
-    width: 320px;
+    min-width: 330px;
     height: 150px;
     padding: 20px;
     border-radius: 3px;
@@ -260,6 +260,15 @@ body {
     animation: post-it_slide 2s;
     animation-fill-mode: backwards;
     z-index: 100;
+
+    
+}
+
+.post-it-2 {
+    top: 70%;
+    left: 165px;
+    animation-fill-mode: backwards;
+    animation: post-it_slide 4s;
 }
 
 .skills {
@@ -329,4 +338,13 @@ body {
     &:hover {
         cursor: pointer;
     }
+}
+
+.logo{
+    width: 60px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    margin: 15px;
+    opacity: 90%;
 }
