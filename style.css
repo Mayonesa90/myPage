@@ -114,7 +114,7 @@
 body {
     background-color: rgb(250, 249, 237);
     background-image: url(images/white-paper-texture-background.jpg);
-    background-size: cover;
+    background-size:cover;
     background-position:top;
     display: flex;
     flex-direction: column;
@@ -266,7 +266,7 @@ body {
 
 .post-it-2 {
     top: 75%;
-    left: 90px;
+    left: 120px;
     animation-fill-mode: backwards;
     animation: post-it_slide ease-in-out 3s;
     background-color: rgb(169, 236, 166);
