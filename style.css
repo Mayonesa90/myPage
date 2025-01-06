@@ -1,6 +1,6 @@
 
 @keyframes post-it_slide {
-    0% {transform: translateX(-300px) rotate(-12deg)}
+    0% {transform: translateX(-350px) rotate(-12deg)}
     100% {transform: translateX(0) rotate(-12deg);}
 }
 
